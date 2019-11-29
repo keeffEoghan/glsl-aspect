@@ -6,7 +6,7 @@ Small GLSL utility for aspect ratios in 1-4 dimensions.
 
 [See the demo](https://keeffeoghan.github.io/glsl-aspect) and [its source code](./example/).
 
-```c
+```glsl
 #pragma glslify: aspect = require('glsl-aspect');
 #pragma glslify: aspectCover = require('glsl-aspect/cover');
 #pragma glslify: aspectContain = require('glsl-aspect/contain');
