@@ -12,4 +12,4 @@ vec4 aspectCover(in vec4 size) {
     return aspect(size, max(size.x, max(size.y, max(size.z, size.w))));
 }
 
-#pragma glslify: export(aspectCover)
+#pragma glslify: export(aspectCover);

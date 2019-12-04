@@ -30,4 +30,4 @@ vec4 aspect(in vec4 size, in float scale) {
     return aspect(size, vec4(scale));
 }
 
-#pragma glslify: export(aspect)
+#pragma glslify: export(aspect);

@@ -12,4 +12,4 @@ vec4 aspectContain(in vec4 size) {
     return aspect(size, min(size.x, min(size.y, min(size.z, size.w))));
 }
 
-#pragma glslify: export(aspectContain)
+#pragma glslify: export(aspectContain);
