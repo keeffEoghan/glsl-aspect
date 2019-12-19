@@ -23,8 +23,14 @@ void main() {
     vec2 size = imageSize/viewSize;
     int m = int(mode);
 
-    gl_FragColor = texture2D(image,
-        uv*((m == 0)? aspect(size, scale)
+    vec2 st = uv*((m == 0)? aspect(size, scale)
             : ((m == 1)? aspectCover(size)
-            :   aspectContain(size))));
+            :   aspectContain(size)));
+
+    st = (st*vec2(0.5, -0.5))+0.5;
+
+    vec4 pixel = texture2D(image, st);
+    vec2 limit = abs(floor(st));
+
+    gl_FragColor = mix(vec4(0, 0, 0, 1), pixel, step(max(limit.x, limit.y), 0.0));
 }

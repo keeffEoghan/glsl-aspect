@@ -1,11 +1,11 @@
 {
-  "name": "glsl-aspect",
-  "version": "1.0.0",
+  "name": "@epok.tech/glsl-aspect",
+  "version": "1.0.2",
   "description": "Small GLSL utility for aspect ratios in 1-4 dimensions.",
   "main": "index.glsl",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/keeffEoghan/glsl-aspect"
+    "url": "git+https://github.com/keeffEoghan/glsl-aspect.git"
   },
   "author": "Eoghan O'Keeffe <epok.tech@gmail.com> (https://epok.tech)",
   "license": "MIT",
@@ -19,10 +19,29 @@
     "docs": "rm -rf docs/ && parcel build ./example/index.html ./example/assets/**/* -d ./docs/ --public-url ./"
   },
   "devDependencies": {
-    "@epok.tech/gl-screen-triangle": "^1.1.0",
+    "@epok.tech/gl-screen-triangle": "^1.1.2",
     "cssnano": "^4.1.10",
     "glslify-bundle": "^5.1.1",
     "glslify-deps": "^1.3.1",
     "regl": "^1.3.13"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/keeffEoghan/glsl-aspect/issues"
+  },
+  "homepage": "https://github.com/keeffEoghan/glsl-aspect#readme",
+  "directories": {
+    "doc": "docs",
+    "example": "example"
+  },
+  "keywords": [
+    "glsl",
+    "aspect",
+    "ratio",
+    "fit",
+    "cover",
+    "contain",
+    "webgl",
+    "shader",
+    "regl"
+  ]
 }

@@ -1,10 +1,10 @@
 // Any rendering library, but made with `regl` in mind.
 import getRegl from 'regl';
-import positions from '@epok.tech/gl-screen-triangle';
+import { positions, count } from '@epok.tech/gl-screen-triangle';
 
 import imageSrc from './assets/baboon.png';
 
-import vert from '@epok.tech/gl-screen-triangle/uv-texture.vert.glsl';
+import vert from '@epok.tech/gl-screen-triangle/uv-ndc.vert.glsl';
 
 import frag from './index.frag.glsl';
 
@@ -29,7 +29,7 @@ const draw = regl({
         mode: regl.prop('mode'),
         scale: regl.prop('scale')
     },
-    count: positions.length/2
+    count
 });
 
 const modes = ['aspect', 'cover', 'contain'];
@@ -44,7 +44,7 @@ function frame() {
 
 document.addEventListener('mousemove', ({ clientX: x }) => {
     state.scale = Math.max(x/innerWidth, 0.000001);
-    console.log('scale:', state.scale);
+    ((modes[state.mode] === 'aspect') && console.log('scale:', state.scale));
 });
 
 document.addEventListener('click', () => {
