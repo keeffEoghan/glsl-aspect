@@ -13,7 +13,7 @@ uniform float scale;
 
 varying vec2 uv;
 
-#pragma glslify: aspect = require(../src/index);
+#pragma glslify: aspect = require(../src);
 #pragma glslify: aspectCover = require(../src/cover);
 #pragma glslify: aspectContain = require(../src/contain);
 

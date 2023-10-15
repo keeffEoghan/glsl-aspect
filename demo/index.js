@@ -46,7 +46,9 @@ function show() {
   const { mode, scale } = state;
   const name = modes[mode];
 
-  $show.innerText = `${mode}: ${name}${(name === 'scale')? ` (${scale})` : ''}`;
+  $show.innerText = mode+': '+name+
+    ((name === 'scale')? ` (${scale.toFixed(3)})` : '');
+
   $body.classList.remove(...modes);
   $body.classList.add(name);
 }
