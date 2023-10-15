@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after { box-sizing: inherit; }
+
+
+html { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: monospace;
+  color: #fff;
+  cursor: pointer;
+
+  &.scale { cursor: ew-resize; }
+}
+
+header,
+footer {
+  position: absolute;
+  background: #000;
+  padding: 0.5em 1em;
+  z-index: 2;
+}
+
+header {
+  top: 0;
+  font-size: 1.1em;
+}
+
+footer { bottom: 0; }

@@ -1,6 +1,6 @@
 # `glsl-aspect`
 
-Small GLSL utility for aspect ratios in 1-4 dimensions - cover, contain, and flexible.
+Small `GLSL` utility for aspect ratios in 1-4 dimensions - cover, contain, and flexible.
 
 ## Installation
 
@@ -15,12 +15,12 @@ yarn add @epok.tech/glsl-aspect
 
 ## Usage
 
-[See the demo](https://keeffeoghan.github.io/glsl-aspect) and [its source code](https://github.com/keeffEoghan/glsl-aspect/tree/master/example).
+[See the demo](https://keeffeoghan.github.io/glsl-aspect) and [its source code](https://github.com/keeffEoghan/glsl-aspect/tree/master/demo).
 
 ```glsl
-#pragma glslify: aspect = require('@epok.tech/glsl-aspect');
-#pragma glslify: aspectCover = require('@epok.tech/glsl-aspect/cover');
-#pragma glslify: aspectContain = require('@epok.tech/glsl-aspect/contain');
+#pragma glslify: aspect = require(@epok.tech/glsl-aspect/src);
+#pragma glslify: aspectCover = require(@epok.tech/glsl-aspect/src/cover);
+#pragma glslify: aspectContain = require(@epok.tech/glsl-aspect/src/contain);
 
 // These may set to any value:
 vec4 size;
