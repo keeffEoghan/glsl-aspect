@@ -1,6 +1,6 @@
 {
   "name": "@epok.tech/glsl-aspect",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Small GLSL utility for aspect ratios in 1-4 dimensions.",
   "main": "cjs/index.js",
   "repository": {
@@ -22,8 +22,8 @@
     "dist:fresh": "yarn clean && (yarn build:fresh & yarn docs:fresh & wait)",
     "build": "parcel build $(find ./src/./*.js | xargs) --target esm --target cjs",
     "build:fresh": "yarn build --no-cache",
-    "docs:demo": "parcel build --target docs",
-    "docs:demo:fresh": "yarn docs:demo --no-cache",
+    "docs": "parcel build --target docs",
+    "docs:fresh": "yarn docs --no-cache",
     "clean": "yarn clean:build & yarn clean:docs & wait",
     "clean:build": "rm -rf ./cjs/ ./esm/",
     "clean:docs": "rm -rf ./docs/"
